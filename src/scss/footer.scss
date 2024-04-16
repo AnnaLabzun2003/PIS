@@ -1,0 +1,42 @@
+footer {
+    height: 186px;
+    background-color:  #29524A; // Темнозелений фон футера
+    color: white; // Білий текст
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 26px;
+    display: flex;
+      justify-content: space-between; // Розміщення компонентів в ряд з однаковими відступами
+      padding: 20px; // Одинакові відступи з кожного боку
+  
+    
+  
+    .logo img {
+      max-width: 232px; // Максимальна ширина логотипу
+    }
+  
+    .foot-hours {
+      text-align: center; // Центрування тексту "Робочі години"
+    }
+  
+    .foot-contact {
+      font-weight: bold; // Жирний шрифт для контактної інформації
+    }
+
+    .graphic{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .contact{
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 20px;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+  }
+  

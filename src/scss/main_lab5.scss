@@ -1,17 +1,13 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;1,500&family=Spectral:wght@300&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
 // Кольори
 $black: #0A0C14;
 $gray: #545465;
 $dark-gray:#2A2940;
-$pink: #FFF8F8;
+$pink:#FFEEF1;
 $orange:#FFA41C;
 $red:#FE0000;
 $white:#FFFFFF;
-$blue:#A1B5FA;
 // Розміри
 $width:1440px;
 $header-hegth:740px;
@@ -26,9 +22,7 @@ $h2-font-size:48px;
 $h3-font-size: 24px;
 // відступи
 $margin:50px;
-$gap:30px;
 $margin-left:40px;
-
 html {
   font-size: $p-font-size;
   color: $gray;
@@ -38,7 +32,40 @@ body
 {
   max-width: 1440px;
   margin:auto;
-
+  text-align: center;
  font-family: 'Noto Sans';
- color: $dark-gray;
+}
+// Приклади до п'ятої лаби лаби
+   a
+   {
+    color:$dark-gray;
+   }
+header,main,footer
+{
+  border:1px dashed $gray;
+}
+h1
+{
+  font-size: $h1-font-size;
+  font-weight: bold;
+   font-family: 'Cormorant Infant';
+}
+h2
+{
+  font-size: $h2-font-size;
+ 
+}
+header
+{
+  height: $header-hegth;
+}
+footer
+{
+  height: $footer-heigth;
+  background-color: $black;
+  color:$white;
+}
+main
+{
+  height: $content-heigth;
 }

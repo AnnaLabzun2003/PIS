@@ -1,2 +1,13 @@
-header 
-    h1 Header
+<script src="main.js"></script>
+
+header
+    .header_logo_menu
+        .logo
+                img(src=require('.//image/logo.png') alt="logo")
+    nav.main-menu
+        button.dropdown-button(id="dropdownButton") За датою v
+            .dropdown-content
+                a(href='#' data-value="За датою") За датою
+                a(href='#' data-value="Від дешевших") Від дешевших
+                a(href='#' data-value="Від дорожчих") Від дорожчих
+        
