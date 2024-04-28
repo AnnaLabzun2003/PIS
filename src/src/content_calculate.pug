@@ -1,0 +1,88 @@
+doctype html
+html(lang="ua")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Travel Reservation
+  body
+    // Форма для введення кількості людей
+    form#peopleForm
+      label(for="numberOfPeople") Кількість людей:
+      input(type="number", id="numberOfPeople", name="numberOfPeople", min="1", max="40")
+      button(type="button", id="nextButton") Далі
+
+    // Форма для введення імен та прізвищ
+    form#namesForm(style="display: none;")
+
+    button(id="reserveButton", type="button", style="display: none;") Обрахунок вартості
+
+    // Виведення списку та загальної суми
+    div#reservationInfo(style="display: none;")
+      h2 Деталі бронювання
+      ul
+      p Загальна сума: 0.00
+
+    script.
+      const nextButton = document.getElementById('nextButton');
+      const reserveButton = document.getElementById('reserveButton');
+      const peopleForm = document.getElementById('peopleForm');
+      const namesForm = document.getElementById('namesForm');
+      const reservationInfo = document.getElementById('reservationInfo');
+      let numberOfPeople;
+      let names = [];
+      let totalPrice;
+
+      nextButton.addEventListener('click', () => {
+        numberOfPeople = parseInt(document.getElementById('numberOfPeople').value);
+        if (numberOfPeople > 0) {
+          peopleForm.style.display = 'none';
+          generateNameFields(numberOfPeople);
+          reserveButton.style.display = 'block'; // Show the "Reserve" button
+        }
+      });
+
+      function generateNameFields(number) {
+        namesForm.innerHTML = ''; // Очистимо форму перед генерацією нових полів
+
+        for (let i = 0; i < number; i++) {
+          const div = document.createElement('div');
+          div.innerHTML = `
+            <label for="name${i}">Ім'я:</label>
+            <input type="text" id="name${i}" name="name${i}">
+            <label for="surname${i}">Прізвище:</label>
+            <input type="text" id="surname${i}" name="surname${i}">
+            <div> <br></div>
+          `;
+          namesForm.appendChild(div);
+        }
+
+        namesForm.style.display = 'block'; // Show the names form
+      }
+
+      reserveButton.addEventListener('click', () => {
+        names = [];
+        for (let i = 0; i < numberOfPeople; i++) {
+          const name = document.getElementById(`name${i}`).value;
+          const surname = document.getElementById(`surname${i}`).value;
+          names.push({ name, surname });
+        }
+        totalPrice = numberOfPeople * 2600.00;
+        namesForm.style.display = 'none';
+        reservationInfo.style.display = 'block';
+        displayReservation();
+      });
+
+      function displayReservation() {
+        reserveButton.style.display = 'none';
+        const ul = document.querySelector('#reservationInfo ul');
+        ul.innerHTML = '';
+        if (typeof names !== 'undefined' && names.length) {
+          names.forEach(person => {
+            const li = document.createElement('li');
+            li.textContent = `${person.name} ${person.surname}`;
+            ul.appendChild(li);
+          });
+        }
+        const totalPriceElement = document.querySelector('#reservationInfo p');
+        totalPriceElement.textContent = `Загальна вартість: ${totalPrice ? totalPrice.toFixed(2) : '0.00'}`;
+      }

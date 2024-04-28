@@ -1,0 +1,57 @@
+@import 'mixin';
+
+header {
+    height: 115px;
+    background-color: #29524A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    @media all and (max-width: 576px) {
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+
+.logo {
+    img {
+        width: 207px;
+        height: 114px;
+
+        @media all and (max-width: 576px) {
+            width: 50px;
+        }
+    }
+}
+
+.main-menu {
+    display: flex;
+    align-items: center;
+
+    @media all and (max-width: 576px) {
+        margin-top: 20px;
+    }
+
+    #book-now-button {
+        font-family: 'Roboto Slab', sans-serif;
+        background-color: #FB6107;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        font-size: 28px; 
+        border-radius: 30px; 
+        cursor: pointer;
+
+        @media all and (max-width: 576px) {
+            padding: 5px;
+        }
+    }
+}
+
+hr.orange-line {
+    border: 0;
+    height: 2px;
+    background-color: #FB6107;
+    width: 100%;
+}

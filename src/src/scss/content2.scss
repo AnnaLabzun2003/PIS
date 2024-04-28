@@ -1,0 +1,100 @@
+@import 'bootstrap/scss/bootstrap';
+
+// Стилі для контенту
+section.content {
+    display: flex;
+    // Стилі для першої картинки
+    img {
+        width: 100%;
+    }
+
+    // Стилі для заголовків
+    .heading-container {
+        margin-top: 5%;
+        font-family: 'Roboto Slab', sans-serif;
+        font-size: 64px !important;
+        color: #29524A;
+        text-align: center;
+        
+    }
+
+    // Стилі для часу
+    .plan-container {
+        display: flex;
+        font-family: 'Roboto Slab', sans-serif;
+        margin-bottom: 5%;
+        margin-left: 10%;
+        margin-right: 10%;
+        
+        ul {
+            li {
+                font-size: 34px;
+                color: #29524A;
+                .time {
+                    font-size: 36px;
+                    color: #FB6107;
+                }
+            }
+        }
+    }
+
+    // Стилі для другої картинки
+    hr {
+        border: 0;
+        height: 2px;
+        background-color: #FB6107;
+        width: 100%;
+    }
+
+    // Стилі для каруселі
+    #carouselExampleControls.carousel.slide {
+        width: 60%; // Змінивши на 60% ширини контейнера
+        margin: 0 auto;
+        margin-bottom: 5%;
+    }
+
+    .carousel-container {
+        display: flex;
+        overflow-x: auto;
+        
+        .carousel-slide {
+            flex: 0 0 auto;
+            img {
+                width: 100%; // Змінено на відсоток від ширини контейнера каруселі
+                height: auto;
+                margin: 0 auto; // Це розміщує зображення по центру у каруселі
+                display: block; // Це також допоможе вирівняти зображення по центру
+            }
+        }
+    }
+
+   
+
+    // Стилі для кнопки "Забронювати місце"
+    #book-now-button {
+        display: flex;
+        justify-content: center; /* Це вирівнює текст по центру горизонтально */
+        align-items: center;
+        margin-left: 40%;
+        margin-right: 40%;
+        margin-top: 7%;
+        margin-bottom: 5%;
+        background-color: #FB6107;
+        border: 2px solid #29524A; /* Зелена обводка */
+        color: white;
+        padding: 10px 10px;
+        font-size: 32px;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+    
+    #book-now-button:hover {
+        background-color: #b54403; /* Змінюємо колір при наведенні */
+      
+    }
+
+    
+    a{
+        text-decoration: none;
+    }
+}

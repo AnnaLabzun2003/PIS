@@ -1,0 +1,84 @@
+$primary-color: #29524A;
+$background-color: #E0F9DB;
+$button-color: #FFFFFF;
+$input-background: #FFFFFF;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 24px;
+}
+
+body {
+  font-family: 'Roboto Slab', sans-serif;
+  background-color: $background-color;
+}
+
+form {
+  margin-bottom: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+label {
+  display: block;
+  margin-bottom: 2%;
+  margin-top: 5%;
+  font-size: 32px;
+}
+
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: $input-background;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  color: $button-color;
+}
+
+#nextButton {
+    background-color: $primary-color;
+    margin-bottom: 16%;
+    
+}
+
+#reserveButton {
+  background-color: $primary-color;
+  margin-bottom: 16%;
+  margin-left: 10%;
+}
+
+#peopleForm {
+  background-color: $background-color;
+}
+
+#namesForm {
+  background-color: $background-color;
+}
+.innerHTML{
+    border: 2px solid #013815;
+}
+
+
+#reservationInfo {
+  background-color: $background-color;
+  margin-bottom: 15%;
+}
+
+li {
+  list-style-type: none;
+}
+

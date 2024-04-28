@@ -1,0 +1,54 @@
+<script src="main.js"></script>
+section.content
+    img(src=require('.//image/fon4.png') alt="Background Image", style="width: 100%;") 
+    .heading-container
+        h2 План екскурсії 
+    .plan-container
+        ul
+            li
+                span.time 9:00 - 
+                |  Відправлення з центральної площі міста 
+            li
+                span.time 10:00 - 
+                |  Прибуття до замку Потоцьких 
+            li
+                span.time 10: 00 - 15:00 - 
+                |  Екскурсійна програма по замку
+            li
+                span.time 15: 00 - 16:00  - 
+                |  Час на фото, вільний час
+            li
+                span.time 16:00  - 
+                |  Повернення до міста
+           
+
+    img(src=require('.//image/line.png') alt="Divider Line", style="width: 100%;") 
+
+    .heading-container
+        h2 Фотогалерея 
+
+ 
+    #carouselExampleControls.carousel.slide(data-bs-ride="carousel")
+        .carousel-inner
+            .carousel-item.active
+                img.d-block.w-60(src=require('.//image/carusel1_1.png') alt="Photo 1")
+            .carousel-item
+                img.d-block.w-60(src=require('.//image/carusel1_2.png') alt="Photo 2")
+            .carousel-item
+                img.d-block.w-60(src=require('.//image/carusel1_3.png') alt="Photo 3")
+            .carousel-item
+                img.d-block.w-60(src=require('.//image/carusel1_4.png') alt="Photo 4")
+
+        // Додаємо стрілки для перемикання фото
+        button.carousel-control-prev(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev")
+            span.carousel-control-prev-icon(aria-hidden="true")
+            span.visually-hidden Попередній
+        button.carousel-control-next(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next")
+            span.carousel-control-next-icon(aria-hidden="true")
+            span.visually-hidden Наступний
+
+    img(src=require('.//image/line.png') alt="Divider Line", style="width: 100%;") 
+
+   
+    a(href='page_sum4.html')
+        button#book-now-button Забронювати місце

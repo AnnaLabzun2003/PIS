@@ -1,0 +1,54 @@
+section.content {
+  background-color: #E0F9DB;
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    text-align: center;
+  }
+
+  .heading-container {
+    
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 44px;
+    text-align: center;
+    padding-bottom: 7%;
+  }
+
+  .blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .block {
+      width: 40%;
+      margin: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); // Відновлюємо тінь при наведенні
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .blocks {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    .block {
+      width: 90%;
+      margin: 10px auto;
+    }
+  }
+}
+
+
